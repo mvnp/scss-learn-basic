@@ -4,7 +4,6 @@
 $primary-color: tomato;
 $primary_font: sans-serif, "cursive";
 
-
 body {
     background-color: $primary_color;
     font-family: $primary_font;
@@ -44,4 +43,25 @@ div.transformOne {
 div.transformTwo {
     @include trasnformMe(130px, 210px);
     font-size: 1.5em;;
+}
+
+%extend-border {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color:#333;
+    font-size: 1em;
+}
+
+%extend-otherBorder {
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
+.borderOne {
+    @extend %extend-border;
+}
+
+.borderTwo {
+    @extend %extend-border, %extend-otherBorder;
+    font-size: 1.5em;
 }
