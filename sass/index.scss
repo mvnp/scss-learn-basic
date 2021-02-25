@@ -66,3 +66,36 @@ div.transformTwo {
     @extend %extend-border, %extend-otherBorder;
     font-size: 1.5em;
 }
+
+// Pseudo Selectors
+.anyElement {
+    a {
+        text-decoration: none;
+        color: yellowgreen;
+        &:hover {
+            color: white;
+        }
+        &:active {
+            color: black;
+        }
+        &::after {
+            color: yellow;
+        }
+    }
+}
+
+// Operators
+.thirdColumns {
+    width: 800px + 200px;
+    height: 100% - 15%;
+    font-weight: 100 * 7;
+    max-width: (100% / 3);
+}
+
+// Strings concat before and after
+p {
+    &::before {
+        content: "I am a backend " + developer; /* to string */
+        font-family: cursive + ", serif"; /* to code */
+    }
+}

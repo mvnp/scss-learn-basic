@@ -59,4 +59,32 @@ div.transformTwo {
   font-size: 1.5em;
 }
 
+.anyElement a {
+  text-decoration: none;
+  color: yellowgreen;
+}
+.anyElement a:hover {
+  color: white;
+}
+.anyElement a:active {
+  color: black;
+}
+.anyElement a::after {
+  color: yellow;
+}
+
+.thirdColumns {
+  width: 1000px;
+  height: 85%;
+  font-weight: 700;
+  max-width: 33.3333333333%;
+}
+
+p::before {
+  content: "I am a backend developer";
+  /* to string */
+  font-family: cursive, serif;
+  /* to code */
+}
+
 /*# sourceMappingURL=styles.css.map */
